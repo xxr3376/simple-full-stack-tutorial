@@ -1,0 +1,42 @@
+<html>
+<head>
+    <style>
+        .p1 {
+            color: red;
+        }
+        .p2 {
+            font-size: 34px;
+        }
+
+        .hide {
+          display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="p1">
+        Hello world
+    </div>
+
+    <div id="resp" class="p2">
+        Full Stack!
+    </div>
+
+    <div id="jump" class="hide">
+      <a href="{{url_for('index2')}}"> This is a link </a>
+    </div>
+
+    <button id="btn"> Click Me!
+    </button>
+    <script>
+        var ele = document.getElementById("btn")
+        ele.onclick = function() {
+            var resp = document.getElementById("resp")
+            resp.className = "p1 p2"
+
+            var jump = document.getElementById("jump")
+            jump.className = ""
+        }
+    </script>
+</body>
+</html>
